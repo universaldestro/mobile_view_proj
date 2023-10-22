@@ -1,0 +1,153 @@
+body{
+    background-color: rgb(25, 24, 24);
+    color: aliceblue;
+    }
+
+    .skipmain{
+        display: none;
+    }
+
+    a{
+        color: rgb(234, 255, 0);
+    }
+    h1{
+        font-size: 12;
+        font-family: 'Courier New', Courier, monospace ;
+        align-items: center;
+    }
+    h2{
+        font-size: 12;
+        font-family: 'Courier New', Courier, monospace ;
+        align-items: center;
+    }
+    h3{
+        font-size: 12;
+        font-family: 'Courier New', Courier, monospace ;
+        color: white;
+    }
+    p{
+        line-height: double;
+    }
+    img{
+        border: solid black 5px;
+        padding: 10px;
+        margin: 20 px;
+        border-top-right-radius: 30px;
+    }
+    nav{
+        border: 2px solid black;
+        font-size: 30px;
+    }
+    nav li
+    {
+        height: 50px;
+        border: 1px black solid;
+        padding: 30px;
+        display: block;
+        
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 3fr;
+        grid-gap: 20px;
+        padding: 10px;
+    }
+
+    
+
+      @media only screen and (min-width: 916px){
+        body{
+            background-color: rgb(25, 24, 24);
+            color: aliceblue;
+            }
+            a{
+                color: rgb(234, 255, 0);
+            }
+            h1{
+                font-size: 12;
+                font-family: 'Courier New', Courier, monospace ;
+                align-items: center;
+            }
+
+            h2{
+                font-size: 12;
+                font-family: 'Courier New', Courier, monospace ;
+                align-items: center;
+            }
+
+            h3{
+                font-size: 12;
+                font-family: 'Courier New', Courier, monospace ;
+                color: white;
+            }
+
+            p{
+                line-height: double;
+            }
+
+            img{
+                border: solid black 5px;
+                padding: 10px;
+                margin: 20 px;
+                border-top-right-radius: 30px;
+            }
+
+            nav{
+                border: 2px solid black;
+                
+            }
+
+            nav li{
+                height: 50px;
+                border: 1px black solid;
+                display: inline-block;
+                
+            }
+        
+            .grid-container{
+                display: grid;
+                grid-template-columns: 1fr 2fr 1fr;
+                grid-template-rows: 3fr;
+                grid-gap: 20px;
+                padding: 10px;
+            }
+
+            .skipmain{
+                display: contents;
+            }
+      }
+
+      @keyframes animation {
+        from {background-color: red;}
+        to {background-color: yellow;}
+        to {background-color: purple;}
+        to {background-color: blue;}
+        to {background-color: cyan;}
+        to {background-color: indigo;}
+        to {background-color: midnightblue;}
+      }
+
+      .animation {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        animation-name: animation;
+        animation-duration: 10s;
+        
+        animation-iteration-count: infinite;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *{
+            animation: none;
+            transition: none;
+        }
+        .gif{
+            display: none;
+        }
+        .static{
+            display: block;
+        }
+      }
