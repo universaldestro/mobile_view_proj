@@ -7,87 +7,90 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>DutchBaby Website - Recipes</title>
+    <script>
+        const viewportWidth = window.innerWidth;
+        console.log(viewportWidth);
+
+        function thing() {
+            if (768 < viewportWidth && viewportWidth < 916) {
+                console.log("Hello"); 
+                document.body.innerHTML += `
+                    <div class="colorChange">
+                        <p>in the text in the form Enter the color you want the backgorund to be then hit submit.</p>
+                        <p>ONLY WORKS IF YOU ACTUALLY CLICK THE BUTTON</p>
+                        <form>
+                            <input type="text" id="input" value="Enter a Color "/>
+                            <input type="button" value="Submit"  onclick="changeBackground()"/>
+                            <div id="alert" style="color: rgb(0, 0, 0)"></div>
+                        </form>
+                    </div>`;
+            } else {
+                document.body.innerHTML += `<div class="colorChange"></div>`;
+            }
+        }
+
+        
+    </script>
 </head>
 
-<body>
+<body onload="thing()">
     <div class="skipmain">Skip to Main content</div>
+    
+    <script>
+     function changeBackground() {
+                
+            let a = document.getElementById('input').value;
+           
+            console.log(a)
+            document.body.style.backgroundColor = a;
+        }   
+    </script>
     
     <nav>
         <ul>
-            <li id = "Toplist"><a href="index.html">Recipes - Current Page</a></li>
-        <li id = "Toplist"><a href="pets.html">Pets</a></li>
-        <li id = "Toplist"><a href= "travel.html">Travel</a></li>
+            <li id="Toplist"><a href="index.html">Recipes - Current Page</a></li>
+            <li id="Toplist"><a href="pets.html">Pets</a></li>
+            <li id="Toplist"><a href="travel.html">Travel</a></li>
         </ul>
-        
     </nav>
     <main>
         <h2>Dutch baby pancake</h2>
-        
-        <img src="image/dutchbaby.JPG" alt="An eggy sweet pancake. Tastes and 
-        smells like nutmeg 
-        and sugar. Rises with heat and falls elsewhere.
-        Is essentially a giant crepe."  width="400">
-   
-    <p>
-    Recipe Ingredients – Just write Recipe Ingredients
-    <ul>
-        <li> ½ cup flour</li>
-        <li>¼ cup sugar</li>
-        <li>⅛ teaspoon nutmeg</li>
-        <li>3 eggs</li>
-        <li>⅔ cup milk</li>
-        <li>¼ oil</li>
-    </ul>
-    
-    </p>
-    
-    
-    
-            <h4 >Recipe Steps – Just write Recipe Steps</h4>
 
-            <div class = "grid-container"> 
-                <div class = "grid-item grid-item-1">preheat oven to 425 degrees</div>
-                <div class = "grid-item grid-item-2">Put pan in oven with the oil</div>
-                <div class = "grid-item grid-item-3">Mix dry ingredients. </div>
-                <div class = "grid-item grid-item-4">Mix eggs and milk</div>
-                <div class = "grid-item grid-item-5">Mix all together</div>
-                <div class = "grid-item grid-item-6">Let it sit for ten minutes</div>
-                <div class = "grid-item grid-item-7">Put in oven for 14 minutes</div>
-                <div class = "grid-item grid-item-8">Enjoy</div>
-            </div>
+        <img src="image/dutchbaby.JPG" alt="An eggy sweet pancake. Tastes and smells like nutmeg and sugar. Rises with heat and falls elsewhere. Is essentially a giant crepe." width="400">
+        <p>
+            Recipe Ingredients – Just write Recipe Ingredients
+            <ul>
+                <li>½ cup flour</li>
+                <li>¼ cup sugar</li>
+                <li>⅛ teaspoon nutmeg</li>
+                <li>3 eggs</li>
+                <li>⅔ cup milk</li>
+                <li>¼ oil</li>
+            </ul>
+        </p>
 
+        <h4>Recipe Steps – Just write Recipe Steps</h4>
 
+        <div class="grid-container">
+            <div class="grid-item grid-item-1">preheat oven to 425 degrees</div>
+            <div class="grid-item grid-item-2">Put pan in oven with the oil</div>
+            <div class="grid-item grid-item-3">Mix dry ingredients. </div>
+            <div class="grid-item grid-item-4">Mix eggs and milk</div>
+            <div class="grid-item grid-item-5">Mix all together</div>
+            <div class="grid-item grid-item-6">Let it sit for ten minutes</div>
+            <div class="grid-item grid-item-7">Put in oven for 14 minutes</div>
+            <div class="grid-item grid-item-8">Enjoy</div>
+        </div>
 
-            <div class =  "animation">THE PATH TO FOREVER ESCALATION</div>
-    
-   
-    
-    
-    
-   
-   
-    
-    
-    <h3>Photo Gallery</h3>
-    <ul>
-        <li><img src="image/DutchBabyWithSides.jpg" alt="Dutch baby with sugar"  width="200">
-        </li>
-        <li><img src="image/David-eyres-pancake.jpg" alt="Variation of dutch baby with no salt" width="200">
-        </li>
-        <li><img src="image/Savory-Herb-Butter-Dutch-Baby-1.jpg" alt=" It’s essentially what I would call blasphemy as pancakes have to be sweet for me." width="200">
-        </li>
-    </ul>
-    
-    
-    
-  
-   <!--
-        Danny Mo
-   -->
-        
-    
-    
-    
+        <div class="animation">THE PATH TO FOREVER ESCALATION</div>
+
+        <h3>Photo Gallery</h3>
+        <ul>
+            <li><img src="image/DutchBabyWithSides.jpg" alt="Dutch baby with sugar" width="200"></li>
+            <li><img src="image/David-eyres-pancake.jpg" alt="Variation of dutch baby with no salt" width="200"></li>
+            <li><img src="image/Savory-Herb-Butter-Dutch-Baby-1.jpg" alt="It’s essentially what I would call blasphemy as pancakes have to be sweet for me." width="200"></li>
+        </ul>
     </main>
 </body>
+
 </html>

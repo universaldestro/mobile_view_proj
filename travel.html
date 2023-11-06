@@ -6,8 +6,42 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>DutchBaby Website</title>
+    <script>
+        const viewportWidth = window.innerWidth;
+        console.log(viewportWidth);
+
+        function thing() {
+            if (768 < viewportWidth && viewportWidth < 916) {
+                console.log("Hello"); 
+                document.body.innerHTML += `
+                    <div class="colorChange">
+                        <p>in the text in the form Enter the color you want the backgorund to be then hit submit.</p>
+                        <p>ONLY WORKS IF YOU ACTUALLY CLICK THE BUTTON</p>
+                        <form>
+                            <input type="text" id="input" value="Enter a Color "/>
+                            <input type="button" value="Submit"  onclick="changeBackground()"/>
+                            <div id="alert" style="color: rgb(0, 0, 0)"></div>
+                        </form>
+                    </div>`;
+            } else {
+                document.body.innerHTML += `<div class="colorChange"></div>`;
+            }
+        }
+
+        
+    </script>
 </head>
-<body>
+<body onload="thing()">
+
+    <script>
+        function changeBackground() {
+                   
+               let a = document.getElementById('input').value;
+              
+               console.log(a)
+               document.body.style.backgroundColor = a;
+           }   
+       </script>
     <div class="skipmain">
         <a href="#main">Skip to Main Content</a>
     </div>
